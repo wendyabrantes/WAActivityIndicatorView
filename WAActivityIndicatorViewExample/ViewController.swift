@@ -12,24 +12,34 @@ class ViewController: UIViewController {
 
     var pulseView:WAActivityIndicatorView!
     var dotsView:WAActivityIndicatorView!
+    var dotsTriangleView:WAActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        pulseView = WAActivityIndicatorView(frame: CGRect(x: 50, y: 80, width: 80, height: 80),
+        let itemSize : CGFloat = 80.0
+        
+        self.view.backgroundColor = UIColor.lightGrayColor()
+        
+        pulseView = WAActivityIndicatorView(frame: CGRect(x: 50, y: itemSize, width: itemSize, height: itemSize),
                 indicatorType: ActivityIndicatorType.Pulse,
-                tintColor: UIColor.blueColor(),
-                indicatorSize: 80)
-        pulseView.backgroundColor = UIColor.yellowColor()
+                tintColor: UIColor.whiteColor(),
+                indicatorSize: itemSize)
+
         view.addSubview(pulseView)
         
-        dotsView = WAActivityIndicatorView(frame: CGRect(x: 150, y: 80, width: 80, height: 80),
+        dotsView = WAActivityIndicatorView(frame: CGRect(x: 150, y: itemSize, width: itemSize, height: itemSize),
             indicatorType: ActivityIndicatorType.ThreeDotsScale,
-            tintColor: UIColor.blueColor(),
-            indicatorSize: 80)
-        dotsView.backgroundColor = UIColor.yellowColor()
+            tintColor: UIColor.whiteColor(),
+            indicatorSize: itemSize)
         view.addSubview(dotsView)
+        
+        dotsTriangleView = WAActivityIndicatorView(frame: CGRect(x: 250, y: itemSize, width: itemSize, height: itemSize),
+            indicatorType: ActivityIndicatorType.DotTriangle,
+            tintColor: UIColor.whiteColor(),
+            indicatorSize: itemSize)
+        view.addSubview(dotsTriangleView)
         
     }
 
@@ -38,7 +48,7 @@ class ViewController: UIViewController {
         
         pulseView.startAnimating()
         dotsView.startAnimating()
-        
+        dotsTriangleView.startAnimating()
     }
     
     override func didReceiveMemoryWarning() {

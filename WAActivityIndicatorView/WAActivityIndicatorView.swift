@@ -15,16 +15,16 @@ protocol WAActivityIndicatorProtocol {
 enum ActivityIndicatorType{
     case Pulse
     case ThreeDotsScale
-    case GridDots
+    case DotTriangle
     
-    func indicatorProtocol() -> WAActivityIndicatorProtocol {
+    func animation() -> WAActivityIndicatorProtocol {
         switch self {
         case .Pulse:
             return PulseAnimation();
         case .ThreeDotsScale:
             return ThreeDotsScaleAnimation();
-        case .GridDots:
-            return PulseAnimation();
+        case .DotTriangle:
+            return DotTriangleAnimation();
         }
     }
 }
@@ -55,16 +55,16 @@ class WAActivityIndicatorView: UIView {
     func setupAnimation(){
         
         layer.sublayers = nil
-        let animation : WAActivityIndicatorProtocol = indicatorType.indicatorProtocol()
+        let animation : WAActivityIndicatorProtocol = indicatorType.animation()
         animation.setupAnimationInLayer(layer, size: indicatorSize, tintColor: _tintColor)
         layer.speed = 0.0
 
     }
 
     func startAnimating(){
-//        if (layer.sublayers?.isEmpty == true) {
+        if layer.sublayers == nil {
             setupAnimation()
-//        }
+        }
         layer.speed = 1.0
         _isAnimating = true
     }

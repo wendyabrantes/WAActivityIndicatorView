@@ -33,11 +33,7 @@ struct ThreeDotsScaleAnimation: WAActivityIndicatorProtocol {
         replicatorLayer.instanceTransform = CATransform3DMakeTranslation(marginBetweenDot+dotSize, 0, 0)
         
         replicatorLayer.addSublayer(dot)
-
-
         layer.addSublayer(replicatorLayer)
-
-        
         dot.addAnimation(scaleAnimation(), forKey: "scaleAnimation")
         
     }
