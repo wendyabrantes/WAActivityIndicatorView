@@ -16,6 +16,7 @@ enum ActivityIndicatorType{
     case Pulse
     case ThreeDotsScale
     case DotTriangle
+    case GridDots
     
     func animation() -> WAActivityIndicatorProtocol {
         switch self {
@@ -25,6 +26,8 @@ enum ActivityIndicatorType{
             return ThreeDotsScaleAnimation();
         case .DotTriangle:
             return DotTriangleAnimation();
+        case .GridDots:
+            return GridDotsAnimation();
         }
     }
 }

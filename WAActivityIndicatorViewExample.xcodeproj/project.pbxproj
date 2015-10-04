@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C50B82661BC021EC005ECD0D /* DotTriangleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B82651BC021EC005ECD0D /* DotTriangleAnimation.swift */; settings = {ASSET_TAGS = (); }; };
+		C50B82681BC05E39005ECD0D /* GridDotsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50B82671BC05E39005ECD0D /* GridDotsAnimation.swift */; settings = {ASSET_TAGS = (); }; };
 		C5E2EBFE1BBFF00700C69949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2EBFD1BBFF00700C69949 /* AppDelegate.swift */; };
 		C5E2EC001BBFF00700C69949 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2EBFF1BBFF00700C69949 /* ViewController.swift */; };
 		C5E2EC031BBFF00700C69949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E2EC011BBFF00700C69949 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		C50B82651BC021EC005ECD0D /* DotTriangleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotTriangleAnimation.swift; sourceTree = "<group>"; };
+		C50B82671BC05E39005ECD0D /* GridDotsAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridDotsAnimation.swift; sourceTree = "<group>"; };
 		C5E2EBFA1BBFF00700C69949 /* WAActivityIndicatorViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WAActivityIndicatorViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E2EBFD1BBFF00700C69949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5E2EBFF1BBFF00700C69949 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				C5E2EC151BC016EF00C69949 /* PulseAnimation.swift */,
 				C5E2EC171BC017DA00C69949 /* ThreeDotsScaleAnimation.swift */,
 				C50B82651BC021EC005ECD0D /* DotTriangleAnimation.swift */,
+				C50B82671BC05E39005ECD0D /* GridDotsAnimation.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				C5E2EC001BBFF00700C69949 /* ViewController.swift in Sources */,
 				C5E2EC111BBFF08C00C69949 /* WAActivityIndicatorView.swift in Sources */,
 				C5E2EC161BC016EF00C69949 /* PulseAnimation.swift in Sources */,
+				C50B82681BC05E39005ECD0D /* GridDotsAnimation.swift in Sources */,
 				C5E2EC181BC017DA00C69949 /* ThreeDotsScaleAnimation.swift in Sources */,
 				C5E2EBFE1BBFF00700C69949 /* AppDelegate.swift in Sources */,
 			);

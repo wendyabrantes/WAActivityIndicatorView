@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var pulseView:WAActivityIndicatorView!
     var dotsView:WAActivityIndicatorView!
     var dotsTriangleView:WAActivityIndicatorView!
+    var gridDotsView:WAActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,12 @@ class ViewController: UIViewController {
             indicatorSize: itemSize)
         view.addSubview(dotsTriangleView)
         
+        gridDotsView = WAActivityIndicatorView(frame: CGRect(x: 50, y: itemSize + 100, width: itemSize, height: itemSize),
+            indicatorType: ActivityIndicatorType.GridDots,
+            tintColor: UIColor.whiteColor(),
+            indicatorSize: itemSize)
+        view.addSubview(gridDotsView)
+        
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -49,6 +56,7 @@ class ViewController: UIViewController {
         pulseView.startAnimating()
         dotsView.startAnimating()
         dotsTriangleView.startAnimating()
+        gridDotsView.startAnimating()
     }
     
     override func didReceiveMemoryWarning() {

@@ -44,7 +44,6 @@ struct PulseAnimation: WAActivityIndicatorProtocol {
         alphaAnim.toValue = NSNumber(float: 0.0)
         
         return alphaAnim
-        
     }
     func scaleAnimation() -> CABasicAnimation{
         let scaleAnim = CABasicAnimation(keyPath: "transform")

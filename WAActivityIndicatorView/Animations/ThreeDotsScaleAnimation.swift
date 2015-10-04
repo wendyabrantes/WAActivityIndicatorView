@@ -26,7 +26,7 @@ struct ThreeDotsScaleAnimation: WAActivityIndicatorProtocol {
         dot.fillColor = tintColor.CGColor
         
         let replicatorLayer = CAReplicatorLayer()
-        replicatorLayer.frame = CGRect(x: 0,y: 0,width: size,height: size)
+        replicatorLayer.frame = CGRect(x: 0,y: 0,width: size, height: size)
         
         replicatorLayer.instanceDelay = 0.2
         replicatorLayer.instanceCount = 3

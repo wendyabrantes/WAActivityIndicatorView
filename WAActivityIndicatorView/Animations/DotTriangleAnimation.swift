@@ -14,12 +14,12 @@ struct DotTriangleAnimation: WAActivityIndicatorProtocol {
     func setupAnimationInLayer(layer: CALayer, size: CGFloat, tintColor: UIColor) {
     
         let dotSize = size / 4
-        let transformX = size - dotSize
+        let transformX : CGFloat = size-dotSize
         
         let dot = CAShapeLayer()
         dot.frame = CGRect(
-            x: (size - dotSize) / 2,
-            y: (size - dotSize) / 2,
+            x: 0, 
+            y: 0,
             width:dotSize,
             height: dotSize)
         
@@ -29,20 +29,22 @@ struct DotTriangleAnimation: WAActivityIndicatorProtocol {
         dot.fillColor = UIColor.clearColor().CGColor
         
         let replicatorLayer = CAReplicatorLayer()
-        replicatorLayer.frame = CGRect(x: 0,y: 0,width: size,height: size)
+        replicatorLayer.frame = CGRect(x: 0,y: 0,width: dotSize,height: dotSize)
         
         replicatorLayer.instanceDelay = 0.0
-        replicatorLayer.instanceCount = 4
+        replicatorLayer.instanceCount = 3
         
         var transform = CATransform3DIdentity
         transform = CATransform3DTranslate(transform, transformX, 0, 0.0)
         transform = CATransform3DRotate(transform, (CGFloat(120.0)*CGFloat(M_PI))/CGFloat(180.0), 0.0, 0.0, 1.0)
         replicatorLayer.instanceTransform = transform
         
+    
         replicatorLayer.addSublayer(dot)
-        layer.addSublayer(replicatorLayer)
+        
 
-        dot.addAnimation(rotationAnimation(transformX), forKey: "rotateAnimation")   
+        layer.addSublayer(replicatorLayer)
+        dot.addAnimation(rotationAnimation(transformX), forKey: "rotateAnimation")
     }
     
     func rotationAnimation(transformX: CGFloat) -> CABasicAnimation{
@@ -57,7 +59,7 @@ struct DotTriangleAnimation: WAActivityIndicatorProtocol {
         rotateAnim.autoreverses = false
         rotateAnim.repeatCount = HUGE
         rotateAnim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        rotateAnim.duration = 1.0
+        rotateAnim.duration = 0.8
         
         return rotateAnim
     }
