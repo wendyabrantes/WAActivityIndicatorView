@@ -10,6 +10,10 @@ Swift Library using CAReplicator to make nice loading spinnner animation
 * iOS 8.0 or higher (May work on previous versions, i just didnt test on it, feel free to edit)
 * ARC
 
+## Tutorial 
+CAReplicator tutorial can be found at:
+http://iostuts.io/2015/10/04/the-power-of-careplicatorlayer/
+
 ## Demo
 
 Open and run the WAActivityIndicatorViewExample project in Xcode to see WAActivityIndicatorView in action. The example show how different animation.
