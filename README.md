@@ -1,5 +1,7 @@
 # WAActivityIndicatorView
-Swift Library using CAReplicator to make nice loading spinnner animation
+Swift Library using CAReplicator to make nice loading spinnner animation. 
+The idea was inspired from Danil Gontovnik Objective-c repo https://github.com/gontovnik/DGActivityIndicatorView
+
 
 ![alt tag](https://raw.githubusercontent.com/wendyabrantes/WAActivityIndicatorView/master/WAActivityIndicatorPreview.gif)
 
